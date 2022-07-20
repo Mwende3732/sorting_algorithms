@@ -55,8 +55,7 @@ void swap_node_back(listint_t **list, listint_t **tail, listint_t **shaker)
  *cocktail_sort_list - sorts a list using cocktail algorithm
  *@list:dblinked list to sort
  *Return: void
- &shaker);
-				print_list((const listint_t *)*list */
+ */
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tail, *shaker;
@@ -77,7 +76,8 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (shaker->n > shaker->next->n)
 			{
-				swap_node_infront(list, &tail,);
+				swap_node_infront(list, &tail, &shaker);
+				print_list((const listint_t *)*list);
 				shaken_unstirred = 0;
 			}
 		}
