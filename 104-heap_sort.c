@@ -4,7 +4,7 @@
  *@a:firstint
  *@b:second int
  */
- *heapify - finds largest among root, right and levoid swap(int *a, int *b)
+void swap(int *a, int *b)
 {
 	int tmp = *a;
 
@@ -12,7 +12,7 @@
 	*b = tmp;
 }
 /**
-ft
+ *heapify - finds largest among root, right and left
  *@array:array to sort
  *@n:int
  *@i:int
