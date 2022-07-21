@@ -1,5 +1,7 @@
 #include "sort.h"
-first integer
+/**
+ *swap - swaps two int
+ *@a:first integer
  *@b: second integer
  */
 void swap(int *a, int *b)
@@ -11,15 +13,12 @@ void swap(int *a, int *b)
 	*b = tmp;
 }
 /**
- *bitonic_merge - sorts a bitonic /**
- *swap - swaps two int
- *@a:sequence
+ *bitonic_merge - sorts a bitonic sequence
  *@array:array
  *@size:size of array
  *@start:starting index of sequence
  *@seq:size of sequence to sort
- array[i + jump])
-			    || (flow == 0 && array[i] *@flow:direction to sort in
+ *@flow:direction to sort in
  */
 void bitonic_merge(int *array, size_t size, size_t start, size_t seq, int flow)
 {
@@ -29,7 +28,8 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq, int flow)
 	{
 		for (i = start; i < start + jump; i++)
 		{
-			if ((flow == 1 && array[i] > < array[i + jump]))
+			if ((flow == 1 && array[i] > array[i + jump])
+			    || (flow == 0 && array[i] < array[i + jump]))
 				swap(array + i, array + i + jump);
 		}
 		bitonic_merge(array, size, start, jump, flow);
